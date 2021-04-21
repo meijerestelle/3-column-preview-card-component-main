@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Lexend Deca';
+    margin: 0;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: hsl(0, 0%, 95%);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+}
+
+.container {
+    background: transparent;
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: hsla(0, 0%, 100%, 0.75);
+}
+
+#card {
+    overflow: hidden;
+    width: 230px;
+    padding: 30px;
+}
+
+.card-img {
+    margin: 20px 0 20px 0;
+}
+
+.sedans-card {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 10px;
+    margin-left: -10px;
+}
+
+.sedans-card>button {
+    color: hsl(31, 77%, 52%);
+}
+
+.suvs-card {
+    z-index: 99;
+    background-color: hsl(184, 100%, 22%);
+    margin-left: -10px; 
+}
+
+.suvs-card>button {
+    color:hsl(184, 100%, 22%);
+}
+
+.luxury-card {
+    z-index: 98;
+    border-radius: 10px;
+    background-color: hsl(179, 100%, 13%);
+    margin-left: -10px;
+}
+
+.luxury-card>button {
+    color:hsl(179, 100%, 13%)
+}
+
+.card-header {
+    font-family: 'Big Shoulders Display';
+}
+
+.card-info {
+    margin-top: 30px;
+}
+
+.btn {
+    border: 2px solid hsl(0, 0%, 95%);
+    margin: 70px 0 20px 0;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    color:hsl(0, 0%, 95%);
+    border: 2px solid hsl(0, 0%, 95%);
+    background-color: transparent;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: auto;
+        flex-direction: column;
+        padding-left: 10px;
+    }
+    #card {
+        max-width: 325px;
+    }
+    .suvs-card, .luxury-card {
+        margin-top: -10px;
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
