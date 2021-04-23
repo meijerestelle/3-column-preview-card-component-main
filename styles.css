@@ -8,6 +8,11 @@
 
 body {
     background-color: hsl(0, 0%, 95%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -22,25 +27,25 @@ h2 {
 
 p {
     color: hsla(0, 0%, 100%, 0.75);
+    line-height: 30px;
     font-size: 15px;
 }
 
 .container {
     background: transparent;
-    width: 960px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    min-width: 100vw;
     background-color: hsla(0, 0%, 100%, 0.75);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .card {
     overflow: hidden;
-    width: 230px;
-    padding: 30px;
+    width: 200px;
+    padding: 70px 50px;
 }
 
 .card-img {
@@ -49,32 +54,27 @@ p {
 
 .sedans-card {
     background-color: hsl(31, 77%, 52%);
-    border-radius: 10px;
-    margin-left: -10px;
 }
 
-.sedans-card>button {
+.sedans-card>a {
     color: hsl(31, 77%, 52%);
 }
 
 .suvs-card {
     z-index: 99;
     background-color: hsl(184, 100%, 22%);
-    margin-left: -10px; 
 }
 
-.suvs-card>button {
+.suvs-card>a {
     color:hsl(184, 100%, 22%);
 }
 
 .luxury-card {
     z-index: 98;
-    border-radius: 10px;
     background-color: hsl(179, 100%, 13%);
-    margin-left: -10px;
 }
 
-.luxury-card>button {
+.luxury-card>a {
     color:hsl(179, 100%, 13%)
 }
 
@@ -83,14 +83,16 @@ p {
 }
 
 .card-info {
-    margin-top: 30px;
+    margin: 30px 0 90px 0;
 }
 
-.btn {
+a.btn {
     border: 2px solid hsl(0, 0%, 95%);
-    margin: 70px 0 20px 0;
+    background-color: hsl(0, 0%, 95%);
+    margin-bottom: 40px;
     padding: 10px 30px;
-    border-radius: 20px;
+    border-radius: 40px;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -99,11 +101,10 @@ p {
     background-color: transparent;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1020px) {
     .container {
         width: auto;
         flex-direction: column;
-        padding-left: 10px;
     }
     .card {
         max-width: 325px;
